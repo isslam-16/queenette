@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Queenette cosmétique</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f7f3f5;--card:#fff;--ink:#1f2a2e;--mute:#6c767a;--line:#e6dde2;--acc:#6b2d5c;--accInk:#fff;--soft:#efe1ea;--sale:#c0392b;--wa:#1fa855;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17141a;--card:#221e26;--ink:#f1eaf0;--mute:#a79fa8;--line:#352f3a;--acc:#d9a6cc;--accInk:#1b1220;--soft:#3a2d3b;--sale:#ff7b6b}}
+:root[data-theme="dark"]{--bg:#17141a;--card:#221e26;--ink:#f1eaf0;--mute:#a79fa8;--line:#352f3a;--acc:#d9a6cc;--accInk:#1b1220;--soft:#3a2d3b;--sale:#ff7b6b}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;line-height:1.6}
+.bar{background:var(--acc);color:var(--accInk);text-align:center;font-size:.85rem;padding:.45rem 1rem}
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.1rem}
+.brand{font-size:1.5rem;font-weight:700;letter-spacing:.2px}
+.brand small{display:block;font-size:.8rem;font-weight:400;color:var(--mute)}
+.tg{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;width:40px;height:40px;font-size:1.1rem;cursor:pointer}
+main{max-width:1000px;margin:0 auto;padding:0 1.1rem 2rem}
+h1{font-size:1.7rem;margin:.6rem 0 .2rem}
+.sub{color:var(--mute);margin:0 0 1.1rem}
+.search{width:100%;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.85rem 1.2rem;font:inherit}
+.search:focus,.sel:focus,.chip:focus,.btn:focus,.tg:focus{outline:2px solid var(--acc);outline-offset:2px}
+.row{display:flex;gap:.6rem;margin:.8rem 0;flex-wrap:wrap}
+.sel,.chip{flex:1;min-width:140px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:.7rem 1rem;font:inherit;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--acc);color:var(--accInk);border-color:var(--acc)}
+.cats{display:flex;gap:.5rem;overflow-x:auto;padding:.2rem 0 .8rem}
+.cat{white-space:nowrap;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:.4rem 1rem;font:inherit;cursor:pointer}
+.cat[aria-pressed="true"]{background:var(--soft);border-color:var(--acc);font-weight:700}
+.count{color:var(--mute);font-size:.9rem;margin:.4rem 0 .8rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+@media(min-width:720px){.grid{grid-template-columns:repeat(4,1fr)}}
+.p{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.img{position:relative;aspect-ratio:1/1;background:var(--soft);display:grid;place-items:center}
+.img svg{width:52%;height:auto}
+.tag{position:absolute;top:.5rem;inset-inline-start:.5rem;font-size:.75rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;background:var(--acc);color:var(--accInk)}
+.tag.sale{background:var(--sale);color:#fff}
+.tag.out{background:var(--mute);color:#fff}
+.info{padding:.7rem .8rem .9rem;display:flex;flex-direction:column;gap:.2rem;flex:1}
+.type{font-size:.78rem;color:var(--mute)}
+.name{font-weight:500;font-size:.95rem}
+.price{margin-top:auto;font-weight:700}
+.price s{color:var(--mute);font-weight:400;font-size:.85rem;margin-inline-start:.4rem}
+.btn{margin-top:.5rem;border:0;border-radius:12px;background:var(--wa);color:#fff;font:inherit;font-weight:700;padding:.6rem;cursor:pointer;text-decoration:none;text-align:center}
+.btn[aria-disabled="true"]{background:var(--line);color:var(--mute);pointer-events:none}
+.empty{grid-column:1/-1;text-align:center;color:var(--mute);padding:2.5rem 1rem}
+.fab{position:fixed;inset-inline-start:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.fab svg{width:30px;height:30px;fill:#fff}
+.pimg{width:100%;height:100%;object-fit:cover}
+.ft{max-width:1000px;margin:0 auto;padding:1.5rem 1.1rem 6rem;border-top:1px solid var(--line);color:var(--mute);text-align:center}
+.ft p{margin:0 0 .4rem}
+.ft a{display:inline-block;margin:.3rem .6rem;color:var(--acc);font-weight:500;text-decoration:none;border-bottom:1px solid var(--line)}
+.ft bdi{direction:ltr}
+</style>
+</head>
+<body>
+<div class="bar">منتجات أصلية 100% مع ضمان الأصالة | التوصيل لـ 58 ولاية</div>
+<header>
+  <div class="brand" dir="ltr">Queenette cosmétique<small>العناية بالبشرة والتجميل</small></div>
+  <button class="tg" id="tg" aria-label="تبديل الوضع الليلي">◐</button>
+</header>
+<main>
+  <h1>جميع المنتجات</h1>
+  <p class="sub">اكتشفي تشكيلتنا من منتجات العناية بالبشرة والتجميل</p>
+  <input class="search" id="q" type="search" placeholder="ابحثي عن منتج..." aria-label="بحث">
+  <div class="row">
+    <select class="sel" id="sort" aria-label="ترتيب">
+      <option value="new">الأحدث</option>
+      <option value="low">السعر: من الأقل</option>
+      <option value="high">السعر: من الأعلى</option>
+    </select>
+    <button class="chip" id="av" aria-pressed="false">المتوفر فقط</button>
+  </div>
+  <div class="cats" id="cats"></div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</main>
+<footer class="ft"><p>للطلب والاستفسار تواصلي معنا:</p><a href="https://wa.me/213770073886" target="_blank" rel="noopener">واتساب <bdi>0770 07 38 86</bdi></a><a href="mailto:dreambeauty714@gmail.com">البريد: <bdi>dreambeauty714@gmail.com</bdi></a></footer>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.200 1 2.200 1.300 2.500 1.500.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.800.9c.3.1.5.2.5.3.1.2.1.8-.1 1.400Z"/></svg>
+</a>
+<script>
+// ===== عدّلي هنا =====
+var PHONE = "213770073886"; // رقم واتساب بصيغة دولية بدون + (مثال: 213555123456)
+var CUR = "دج";
+// لإضافة صورة: ارفعي الصورة في نفس المجلد وزيدي img:"اسم-الصورة.jpg" في سطر المنتج
+// stock:false = نفدت الكمية | old = السعر القديم (يعطي خصم)
+var PRODUCTS = [
+ {"id":1,"name":"سيروم فيتامين C لإشراقة البشرة","cat":"سيروم","price":3200,"old":3800,"color":"#f2a65a","stock":true,"badge":"جديد"},
+ {"id":2,"name":"كريم مرطب بحمض الهيالورونيك","cat":"كريم","price":2600,"color":"#7fb7be","stock":true},
+ {"id":3,"name":"غسول لطيف للبشرة الحساسة","cat":"تنظيف","price":1800,"color":"#9ccc9c","stock":true},
+ {"id":4,"name":"واقي شمس SPF50 خفيف","cat":"كريم","price":2900,"old":3300,"color":"#f4d35e","stock":true,"badge":"مميز"},
+ {"id":5,"name":"أحمر شفاه مات طويل الثبات","cat":"مكياج","price":1500,"color":"#c0455a","stock":true},
+ {"id":6,"name":"زيت علاج علامات التمدد","cat":"سيروم","price":3500,"color":"#f0a28c","stock":false},
+ {"id":7,"name":"ماسك الشعر المغذي","cat":"عناية بالشعر","price":2200,"color":"#a58bd0","stock":true},
+ {"id":8,"name":"تونر مقشر لتضييق المسام","cat":"تنظيف","price":2400,"old":2900,"color":"#8fb8e0","stock":true},
+ {"id":9,"name":"شامبو الأرغان","cat":"عناية بالشعر","price":1100,"old":1250,"color":"#d9b36a","stock":true}
+];
+// ====================
+var st={q:"",sort:"new",av:false,cat:"الكل"};
+var $=function(i){return document.getElementById(i)};
+function fmt(n){return n.toLocaleString("ar-DZ")+" "+CUR}
+function wa(msg){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg)}
+function bottle(c){return '<svg viewBox="0 0 60 100"><rect x="22" y="4" width="16" height="14" rx="3" fill="#3b3340"/><rect x="25" y="16" width="10" height="8" fill="#cfc4cc"/><rect x="10" y="24" width="40" height="72" rx="10" fill="'+c+'"/><rect x="16" y="46" width="28" height="28" rx="4" fill="#fff" opacity=".85"/></svg>'}
+function cats(){
+  var all=["الكل"];PRODUCTS.forEach(function(p){if(all.indexOf(p.cat)<0)all.push(p.cat)});
+  $("cats").innerHTML=all.map(function(c){return '<button class="cat" aria-pressed="'+(c===st.cat)+'" data-c="'+c+'">'+c+'</button>'}).join("");
+}
+function render(){
+  var l=PRODUCTS.filter(function(p){
+    return (!st.av||p.stock)&&(st.cat==="الكل"||p.cat===st.cat)&&p.name.indexOf(st.q.trim())>-1});
+  if(st.sort==="low")l.sort(function(a,b){return a.price-b.price});
+  if(st.sort==="high")l.sort(function(a,b){return b.price-a.price});
+  if(st.sort==="new")l.sort(function(a,b){return b.id-a.id});
+  $("count").textContent="عرض "+l.length+" من "+PRODUCTS.length;
+  $("grid").innerHTML=l.length?l.map(function(p){
+    var t=!p.stock?'<span class="tag out">نفدت الكمية</span>':p.old?'<span class="tag sale">-'+Math.round((1-p.price/p.old)*100)+'%</span>':p.badge?'<span class="tag">'+p.badge+'</span>':"";
+    return '<article class="p"><div class="img">'+(p.img?'<img class="pimg" alt="" src="'+p.img+'">':bottle(p.color))+t+'</div><div class="info"><span class="type">'+esc(p.cat)+'</span><span class="name">'+esc(p.name)+'</span><span class="price">'+fmt(p.price)+(p.old?'<s>'+fmt(p.old)+'</s>':"")+'</span>'+
+    (p.stock?'<a class="btn" target="_blank" rel="noopener" href="'+wa("سلام، حابة نطلب: "+p.name+" ("+fmt(p.price)+")")+'">اطلبي عبر واتساب</a>':'<span class="btn" aria-disabled="true">غير متوفر</span>')+'</div></article>'
+  }).join(""):'<div class="empty">ما لقينا منتج بهذا الاسم. جرّبي كلمة أخرى أو غيّري الفئة.</div>';
+}
+$("q").addEventListener("input",function(e){st.q=e.target.value;render()});
+$("sort").addEventListener("change",function(e){st.sort=e.target.value;render()});
+$("av").addEventListener("click",function(e){st.av=!st.av;e.currentTarget.setAttribute("aria-pressed",st.av);render()});
+$("cats").addEventListener("click",function(e){var c=e.target.getAttribute("data-c");if(c){st.cat=c;cats();render()}});
+$("fab").href=wa("سلام، عندي سؤال على منتجاتكم");
+$("tg").addEventListener("click",function(){
+  var d=document.documentElement,dark=getComputedStyle(d).getPropertyValue("--bg").trim()==="#17141a";
+  d.setAttribute("data-theme",dark?"light":"dark");
+});
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+cats();render();
+</script>
+</body>
+</html>
